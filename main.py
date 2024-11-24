@@ -26,6 +26,7 @@ def conectarComWifi(ssid, senha=None, timeout_seconds=30):
     print('Ip: ', ip)
     return ip
 
+#---funcao que mostra a mensagem se a aluz esta ligada ou nao---#
 def luzEstaLigada(led):
     if led.value==1:
         return "Desligar "
