@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterar Valor do Botão</title>
+</head>
+<body>
+    <form action="./liga-desliga1">
+        <input id="botaoLuz" 
+               type="submit" 
+               style="width: 400px; max-width: 95%; margin-left: 10px; margin-right: 10px;" 
+               value="Luz está desligada" 
+               onclick="alternarLuz(event)" />
+    </form>
+
+    <script>
+        // Estado inicial
+        let luzLigada = false;
+
+        // Função para alternar o estado da luz
+        function alternarLuz(event) {
+            // Impedir o envio do formulário
+            event.preventDefault();
+
+            // Selecionar o botão
+            const botao = document.getElementById('botaoLuz');
+
+            // Alternar estado e atualizar o valor do botão
+            if (luzLigada) {
+                botao.value = "Luz está desligada";
+            } else {
+                botao.value = "Luz está ligada";
+            }
+
+            // Alternar o estado
+            luzLigada = !luzLigada;
+        }
+    </script>
+</body>
+</html>

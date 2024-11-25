@@ -29,9 +29,13 @@ def conectarComWifi(ssid, senha=None, timeout_seconds=30):
 #---funcao que mostra a mensagem se a aluz esta ligada ou nao---#
 def luzEstaLigada(led):
     if led.value==1:
-        return "Desligar "
+        return True
     else:
-        return "Ligar "
+        return False
+    # if led.value==1:
+    #     return "Desligar "
+    # else:
+    #     return "Ligar "
 
 #---cria a página web para ligar/desligar os leds---#
 def paginaDaWeb(luz1,luz2,luz3):
